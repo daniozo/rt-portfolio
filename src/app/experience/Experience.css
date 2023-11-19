@@ -1,0 +1,112 @@
+.experience {
+  color: #fff;
+  background-color: #1a1919;
+}
+.experience-content {
+  position: relative;
+  display: flex;
+  color: #d6d5d5;
+  font-weight: 400;
+  flex-direction: row;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(-100px);
+  justify-content: space-between;
+  transition: opacity 2.5s, transform 2.5s;
+}
+.experience-content-isvisible {
+  opacity: 1;
+  transform: translate(0);
+}
+.experience-timeline {
+  flex: 1;
+  padding: 0 20px;
+  margin-bottom: 4rem;
+}
+.experience-timeline-holder {
+  margin: 0;
+  list-style: none;
+  padding: 0 0 0 55px;
+}
+.experience-timeline-event {
+  margin: 0 0 42px 60px;
+  position: relative;
+  padding-top: 5px;
+  list-style: none;
+  transition: 0.3s;
+}
+.experience-timeline-event::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color: #808080;
+  margin: 0;
+  left: -27px;
+  top: 45px;
+}
+.experience-timeline-event:last-of-type::before {
+  display: none;
+}
+
+.experience-timeline-circle {
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
+.experience-timeline-circle::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 90%;
+  border: 3px solid #808080;
+  position: absolute;
+  left: -16px;
+  top: 3px;
+  z-index: 1;
+  transition: 0.3s;
+}
+.experience-timeline-circle::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  left: -8px;
+  top: 11px;
+  border-radius: 90%;
+  background-color: #808080;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.experience-timeline-content {
+  text-align: left;
+  margin-left: 40px;
+  max-width: 500px;
+  line-height: 1.5em;
+  color: #dfdddd;
+  transition: 0.3s;
+}
+.experience-timeline-date {
+  position: absolute;
+  left: -125px;
+  top: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.experience-timeline-event:hover .experience-timeline-event::before,
+.experience-timeline-event:hover .experience-timeline-circle::before {
+  background-color: #4b4b4b;
+}
+.experience-timeline-event:hover .experience-timeline-content {
+  color: #fff;
+}
+.experience-timeline-event:hover .experience-timeline-date {
+  transform: translate(-10px);
+}
+.experience-cover-letter {
+  flex: 1;
+  margin: 0;
+  padding: 0 30px;
+  line-height: 2;
+}

@@ -1,0 +1,60 @@
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  user-select: none;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-content {
+  margin: 0;
+  padding: 10px 100px 10px 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.logo-wrapper {
+  display: inline-block;
+  padding: 0;
+  height: 100%;
+  transition: transform 0.5s;
+}
+.logo-wrapper:hover {
+  transform: rotate(-360deg);
+}
+.site-logo {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  width: 100%;
+  font-family: "Kaushan Script", cursive;
+}
+.site-logo:hover,
+.site-logo:visited {
+  color: #fff;
+}
+.navbar-items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: #fff;
+  list-style: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.navbar-item {
+  margin: 0 15px;
+  cursor: pointer;
+  display: inline-block;
+}
+.navbar-item:hover {
+  opacity: 0.9;
+}
