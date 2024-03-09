@@ -1,0 +1,56 @@
+/* .theme-toggle {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  margin: 0;
+  padding: 0;
+} */
+.theme-toggle-container {
+  margin: 0;
+  padding: 0;
+}
+.theme-toggle-handler {
+  display: flex;
+  width: 58px;
+  padding: 4px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 35px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #e0e0e0;
+}
+.theme-toggle-handler-left::before {
+  display: flex;
+  content: "";
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  /* color: #fff; */
+  /* opacity: 0.97; */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("moon_icon.svg");
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.theme-toggle-handler-right::before {
+  display: flex;
+  content: "";
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  /* color: #fff; */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("sun_icon.svg");
+  background-size: cover;
+  transform: translateX(25px) rotate(360deg);
+  transition: transform 0.3s;
+}

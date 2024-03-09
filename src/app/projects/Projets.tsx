@@ -1,12 +1,17 @@
 import "./Projets.css";
 import { useInView } from "react-intersection-observer";
+import CONTENT from "../../utils/TextInLanguages";
+import { useLang } from "../../utils/useLang";
 
 const Projects = () => {
+  const { lang } = useLang();
+  const projects = CONTENT[lang].projects;
+
   const [project, projectInView] = useInView({ triggerOnce: true });
 
   return (
     <div id="projects" className="section projects">
-      <h2 className="section-title projects-title">Mes réalisations</h2>
+      <h2 className="section-title projects-title">{projects.sectiontitle}</h2>
       <div
         ref={project}
         className={`projects-wrapper ${
@@ -25,7 +30,7 @@ const Projects = () => {
         <div className="project">
           <div className="project-visuel">
             <img
-              src="https://th.bing.com/th/id/OIP.15aTgLiaqQ1qga6JPXCGMAHaFj?w=520&h=390&rs=1&pid=ImgDetMain"
+              src="https://cdn.shopify.com/s/files/1/0249/6376/files/portfolio-inspiration-hannah-purmort.png?format=webp&v=1556053256"
               alt=""
             />
           </div>

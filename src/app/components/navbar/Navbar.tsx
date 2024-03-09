@@ -1,13 +1,18 @@
 import "./Navbar.css";
-
-const ScrollToSection = (id: string) => {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView();
-  }
-};
+import CONTENT from "../../../utils/TextInLanguages";
+import { useLang } from "../../../utils/useLang";
 
 const Navbar = () => {
+  const ScrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView();
+    }
+  };
+  const { lang } = useLang();
+
+  const navList = CONTENT[lang].navbar.navlinks;
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
@@ -17,33 +22,15 @@ const Navbar = () => {
           </a>
         </div>
         <ul className="navbar-items">
-          <li className="navbar-item" onClick={() => ScrollToSection("home")}>
-            Accueil
-          </li>
-          <li
-            className="navbar-item"
-            onClick={() => ScrollToSection("technologies")}
-          >
-            Compétences
-          </li>
-          <li
-            className="navbar-item"
-            onClick={() => ScrollToSection("projects")}
-          >
-            Réalisations
-          </li>
-          <li
-            className="navbar-item"
-            onClick={() => ScrollToSection("experience")}
-          >
-            A propos
-          </li>
-          <li
-            className="navbar-item"
-            onClick={() => ScrollToSection("contact")}
-          >
-            Contact
-          </li>
+          {navList.map((section, index) => (
+            <li
+              key={index}
+              className="navbar-item"
+              onClick={() => ScrollToSection(section.anchor)}
+            >
+              {section.name}
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

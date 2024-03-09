@@ -1,0 +1,23 @@
+/* .loading-container {
+} */
+.hide-bg {
+  display: none;
+  position: fixed;
+  z-index: 99998;
+  inset: 0px;
+  height: 100vh;
+  background-color: #0f0f0f;
+}
+.loading {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}

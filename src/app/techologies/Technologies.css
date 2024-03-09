@@ -1,7 +1,7 @@
 .techologies {
   margin: 0;
   width: 100%;
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   flex-direction: column;
   background-color: #1a1919;
@@ -9,6 +9,9 @@
 .technologies-wrapper {
   width: 100%;
   margin-bottom: 7rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 .technologies-content {
   display: flex;
@@ -18,24 +21,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .technologie {
   flex-basis: 20%;
   display: flex;
   justify-content: center;
-  margin: 0 0 70px 0;
+  padding-bottom: 3rem;
 }
 .technologie-logo {
-  width: 120px;
-  max-width: 110px;
+  width: 50%;
   height: auto;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out;
+  /* object-fit: contain; */
+  filter: brightness(90%);
 }
-.technologie-logo:hover {
+/* .technologie-logo:hover {
   filter: grayscale(0);
-}
+} */
 /* 
 .technologie {
   width: 100px;

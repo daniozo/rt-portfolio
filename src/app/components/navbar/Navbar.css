@@ -31,13 +31,13 @@
   margin: 0;
   font-weight: bold;
   font-size: 25px;
-  color: #fff;
+  /* color: #fff; */
   width: 100%;
   font-family: "Kaushan Script", cursive;
 }
 .site-logo:hover,
 .site-logo:visited {
-  color: #fff;
+  /* color: #fff; */
 }
 .navbar-items {
   margin: 0;
@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  color: #fff;
+  /* color: #fff; */
   list-style: none;
   font-size: 13px;
   text-transform: uppercase;
@@ -58,3 +58,59 @@
 .navbar-item:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    user-select: none;
+    backdrop-filter: blur(10px);
+    background-color: #000000cc;
+  }
+  .navbar-content {
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  .logo-wrapper {
+    display: inline-block;
+    padding: 0;
+    height: 100%;
+    transition: transform 0.5s;
+  }
+  .logo-wrapper:hover {
+    transform: rotate(-360deg);
+  }
+  .site-logo {
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+    width: 100%;
+    font-family: "Kaushan Script", cursive;
+  }
+  .navbar-items {
+    display: none;
+  }
+}
+
+/* Styles pour tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Styles CSS spécifiques */
+}
+
+/* Styles pour petits écrans de bureau */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles CSS spécifiques */
+}
+
+/* Styles pour écrans de bureau
+@media (min-width: 1025px) {
+  Styles CSS spécifiques 
+}
+*/

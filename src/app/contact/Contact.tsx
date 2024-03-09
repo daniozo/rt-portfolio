@@ -1,7 +1,9 @@
-import { ChangeEvent, FormEvent, useState, useRef } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import "./Contact.css";
 import SocialLinks from "../components/Socials-links";
+import CONTENT from "../../utils/TextInLanguages";
+import { useLang } from "../../utils/useLang";
+import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,9 @@ const Contact = () => {
     message: "",
     subject: "",
   });
+  // const checkFormInput = () => {
+  //   formData.name.trim();
+  // };
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,16 +34,22 @@ const Contact = () => {
 
   const [contact, contactInView] = useInView({ triggerOnce: true });
 
-  const input = useRef<HTMLInputElement>(null);
-  const focusInput = () => {
-    if (input.current) {
-      input.current.focus();
-    }
-  };
+  // const input = useRef<HTMLInputElement>(null);
+  // const focusInput = () => {
+  //   if (input.current) {
+  //     input.current.focus();
+  //   }
+  // };
+
+  const { lang } = useLang();
+  const Contact = CONTENT[lang].contact;
+  // const titl = CONTENT[lang].contact.sectiontitle;
+  // const message = CONTENT[lang].contact.message;
+  // const formelement = CONTENT[lang].contact.formelement;
 
   return (
     <div id="contact" className="section contact">
-      <div className="section-title contact-title">Contactez-moi</div>
+      <div className="section-title contact-title">{Contact.sectiontitle}</div>
       <div
         ref={contact}
         className={`contact-content ${
@@ -46,7 +57,11 @@ const Contact = () => {
         }`}
       >
         <div id="contact" className="contact-message-wrapper">
-          <p className="contact-message">
+          <div className="contact-message">
+            <p className="contact-message-part">{Contact.message.firstpart}</p>
+            <p className="contact-message-part">{Contact.message.secondpart}</p>
+          </div>
+          {/* <p className="contact-message">
             Je suis disponible. Si vous avez des questions, des projets
             intéressants ou simplement envie de prendre contact, n'hésitez pas à
             me contacter. Je suis ouvert aux collaborations, aux opportunités
@@ -63,7 +78,7 @@ const Contact = () => {
               formulaire
             </span>
             .
-          </p>
+          </p> */}
           <div className="contact-contact-links">
             <a
               className="contact-link"
@@ -86,11 +101,11 @@ const Contact = () => {
             <div className="contact-form-row">
               {/* <label>Nom</label> */}
               <input
-                ref={input}
+                // ref={input}
                 type="text"
                 name="name"
                 value={formData.name}
-                placeholder="Nom"
+                placeholder={Contact.formelement.name}
                 onChange={handleInputChange}
               />
             </div>
@@ -100,7 +115,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 value={formData.email}
-                placeholder="Email"
+                placeholder={Contact.formelement.email}
                 onChange={handleInputChange}
               />
             </div>
@@ -110,7 +125,7 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 value={formData.subject}
-                placeholder="Sujet"
+                placeholder={Contact.formelement.subject}
                 onChange={handleInputChange}
               />
             </div>
@@ -119,12 +134,12 @@ const Contact = () => {
               <textarea
                 name="message"
                 value={formData.message}
-                placeholder="Message"
+                placeholder={Contact.formelement.message}
                 onChange={handleInputChange}
               />
             </div>
             <button className="contact-submit-button" type="submit">
-              Envoyer
+              {Contact.formelement.send}
             </button>
           </form>
         </div>

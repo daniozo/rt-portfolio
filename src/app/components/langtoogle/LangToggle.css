@@ -1,0 +1,51 @@
+.lang-toggle {
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+.lang-toggle-container {
+  margin: 0;
+  padding: 0;
+}
+.lang-toggle-handler {
+  display: flex;
+  width: 58px;
+  padding: 4px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 35px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #e0e0e0;
+}
+.lang-toggle-handler-left::before {
+  display: flex;
+  content: "";
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  opacity: 0.97;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("fr_flag.svg");
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.lang-toggle-handler-right::before {
+  display: flex;
+  content: "";
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("uk_flag.svg");
+  background-size: cover;
+  transform: translateX(25px);
+  transition: transform 0.3s;
+}

@@ -1,7 +1,7 @@
 #home {
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
 }
 .home-content {
@@ -26,25 +26,24 @@
   height: auto;
 }
 .home-greeting {
+  /* color: #fff; */
   line-height: 1.2;
-  color: #c7c7c7;
   margin: 0 0 15px 0;
   display: flex;
   flex-direction: column;
 }
 .home-greeting-iam {
-  color: #fff;
   font-size: 20px;
   opacity: 0.8;
 }
 .home-greeting-name {
-  color: #fff;
-  font-size: 80px;
+  /* font-size: 80px; */
+  font-size: 5em;
   font-weight: 500;
 }
 .home-me {
   font-size: 18px;
-  color: #fff;
+  /* color: #fff; */
   opacity: 0.9;
   margin-top: 20px;
 }
@@ -58,7 +57,7 @@
 .home-link {
   margin: 0 20px 0 0;
   letter-spacing: 4px;
-  color: #fff;
+  /* color: #fff; */
   opacity: 0.5;
   font-weight: normal;
   font-size: 13px;
@@ -66,7 +65,7 @@
   text-transform: uppercase;
 }
 .home-link:hover {
-  color: #fff;
+  /* color: #fff; */
   opacity: 0.95;
 }
 .home-background-video {
@@ -78,52 +77,96 @@
   object-fit: cover;
   z-index: -1;
 }
-@keyframes spin- {
-  0% {
-    transform: rotateY(0deg);
+
+/* Styles pour écrans de petite taille (mobiles) */
+@media (max-width: 480px) {
+  .home-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: left; */
   }
-  100% {
-    transform: rotateY(360deg);
+  .home-photo-wrapper {
+    width: 90%;
+    height: auto;
+    /* position: absolute; */
+    top: 10vh;
+    right: 10vw;
+    z-index: -2;
   }
-}
-.moving-text {
-  display: block;
-  position: absolute;
-  top: 20vh;
-  right: -40vw;
-  left: 0;
-  z-index: -2;
-  color: #fff;
-  transform: perspective(32vw) rotateY(22deg) rotate(11deg);
-  opacity: 0.9;
-  text-transform: uppercase;
-}
-.moving-text .moving-text-inner .moving-wrapper {
-  font-size: 4rem;
-  overflow: hidden;
-  position: relative;
-  min-height: 1.5em;
-}
-.moving-text .moving-text-inner {
-  margin: 0;
-  padding: 0;
-}
-.moving-text .moving-text-inner .moving-wrapper .moving.moving-left {
-  position: absolute;
-  margin-top: 0;
-  margin-bottom: 0;
-  top: 0.2em;
-  -webkit-animation: urmove 100s linear infinite;
-  white-space: nowrap;
-  animation: urmove 100s linear infinite alternate;
+  .home-photo {
+    width: 100%;
+    height: auto;
+  }
+  .home-greeting {
+    /* color: #fff; */
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-greeting-iam {
+    font-size: 20px;
+    opacity: 0.8;
+  }
+  .home-greeting-name {
+    /* font-size: 80px; */
+    font-size: 5em;
+    font-weight: 500;
+  }
+  .home-me {
+    font-size: 18px;
+    /* color: #fff; */
+    opacity: 0.9;
+    margin-top: 20px;
+  }
+  .home-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+    padding: 0;
+  }
+  .home-link {
+    margin: 0 20px 0 0;
+    letter-spacing: 4px;
+    /* color: #fff; */
+    opacity: 0.5;
+    font-weight: normal;
+    font-size: 13px;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+  }
+  .home-link:hover {
+    /* color: #fff; */
+    opacity: 0.95;
+  }
+  .home-background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 }
 
-@keyframes urmove {
-  0% {
-    right: 0;
-  }
-
-  100% {
-    right: -6000px;
-  }
+/* Styles pour tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Styles CSS spécifiques */
 }
+
+/* Styles pour petits écrans de bureau */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles CSS spécifiques */
+}
+
+/* Styles pour écrans de bureau
+@media (min-width: 1025px) {
+  Styles CSS spécifiques 
+}
+*/

@@ -11,11 +11,18 @@ import html from "/html.svg";
 import css from "/css.svg";
 // import express from "/express.svg";
 // import typescript from "/typescript.svg";
+import CONTENT from "../../utils/TextInLanguages";
+import { useLang } from "../../utils/useLang";
 
 const Technologies = () => {
+  const { lang } = useLang();
+  const technologies = CONTENT[lang].skills;
+
   return (
     <div id="technologies" className="section techologies">
-      <div className="section-title technologie-title">Mes compétences</div>
+      <div className="section-title technologie-title">
+        {technologies.sectiontitle}
+      </div>
       <div className="technologies-wrapper">
         <ul className="technologies-content">
           <li className="technologie">

@@ -1,11 +1,18 @@
 import "./Footer.css";
 import SocialLinks from "../Socials-links";
+import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
   const date = new Date();
   const currentYear = date.getFullYear();
+
+  const [footer, footerInView] = useInView({ triggerOnce: true });
+
   return (
-    <div className="footer">
+    <div
+      ref={footer}
+      className={`footer ${footerInView ? "footer-isvisible" : ""}`}
+    >
       <div className="socials-links">
         <a
           href={"mailto:" + `${SocialLinks.mail.link}`}
