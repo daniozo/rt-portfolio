@@ -108,7 +108,7 @@ const CONTENT: ContentType = {
       cover: {
         firstpart: "Je me suis toujours posé des questions sur le monde qui m'entoure. Très tôt, je voulais comprendre le sens de la vie, l'origine de l'univers et la place de l'homme dans tout cela. J'ai vite compris que ces questions me dépassaient, mais une chose m'était sûre : il fallait que je trouve ma place.",
         secondpart: "Je me suis alors découvert une passion pour les activités nécessitant de la réflexion. Cette soif de compréhension m'a naturellement conduit à plonger dans le monde de la programmation et du développement. En explorant les langages informatiques, j'ai trouvé un moyen de donner forme à mes idées, de résoudre des problèmes et de créer quelque chose de tangible à partir de l'abstrait de ma pensée.",
-        thirdpart: "Aujourd’hui, avec le développement de nouvelles technologies, notamment de l’intelligence artificielle, mon regard se dirige vers l’avenir et se focalise plus sur l’utilisation de ces technologies dans la création d'outils et de solutions capablent de transformer notre quotidien."
+        thirdpart: "Aujourd’hui, avec le développement de nouvelles technologies, notamment de l’intelligence artificielle, mon regard se dirige vers l’avenir et se focalise plus sur l’utilisation de ces technologies dans la création d'outils et de solutions capables de transformer notre quotidien."
       },
     },
     contact: {
